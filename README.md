@@ -22,17 +22,17 @@ Runtimes below are based on these specifications:
 - `prepare_data.py` takes data directly from the Qualtrics pre- and post-treatment survey, merges it with behavioral data from the article vignette, renames columns, and transforms variables.
 	* Running time:
 		```
-			real	0m5.975s
-			user	0m2.580s
-			sys	0m0.190s
+		real	0m5.975s
+		user	0m2.580s
+		sys	0m0.190s
 		```
 	* Running Python 3.5.2, required packages: 
 		```
-			numpy==1.15.4
-			pandas==0.23.4
-			scikit-learn==0.19.2
-			scipy==1.2.0
-			six==1.10.0
+		numpy==1.15.4
+		pandas==0.23.4
+		scikit-learn==0.19.2
+		scipy==1.2.0
+		six==1.10.0
 		```
 - `text_analysis.py` preprocesses and transforms texts (contraction normalization, lemmatization, spelling correction) and then saves the transformed text for analysis in `analysis.R.` This script also runs the bootstrap models used to identify key words in the open-ended and comment corpora.
 	* Running time:
