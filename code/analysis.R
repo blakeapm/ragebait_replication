@@ -21,7 +21,8 @@ set.seed(1234)
 
 data <- read.csv('../data/survey_data.csv')
 treatments <- c("Sensational", "Outgroup", "Peer Violence")
-covariate_labs <- c(treatments, "Auth. (Log)", "Ethno. (Log)", "Symb. Racism (Log)", "South", "Republican", "Outgroup x Auth. (Log)", "Outgroup x Ethno (Log)", "Outgroup x Symb. Racism (Log)")
+covariate_labs <- c(treatments, "Auth. (Log)", "Ethno.", "Anti-Muslim Sentiment", "Symb. Racism (Log)", "South", "Republican", "Outgroup x Auth. (Log)", "Outgroup x Ethno", "Outgroup x Anti-Muslim Sentiment", "Outgroup x Symb. Racism (Log)")
+
 
 ## Plot themes
 
@@ -37,17 +38,14 @@ theme <- theme_minimal() +
 	)
 
 ## ATE function
-run_ATE_mod <- function(dvs, ivs, emotion=FALSE) {
+run_ATE_mod <- function(dvs, ivs) {
 	i <- 0
 	mods <- list()
 	plot_df <- data.frame()
 	for (dv in dvs) {
-		form <- as.formula(paste(dv, " ~ factor_sensational + factor_outgroup + factor_peer_viol", sep=""))
-		if (emotion == TRUE) {
-			form_full <- as.formula(paste(dv, " ~ factor_sensational*factor_outgroup*factor_peer_viol", sep=""))
-		} else {
-			form_full <- as.formula(paste(dv, " ~ factor_sensational + factor_outgroup + factor_peer_viol + auth_log*factor_outgroup + ethno_og*factor_outgroup + symb_rac_log*factor_outgroup + south + pi_R", sep=""))
-		}
+		form <- as.formula(paste(dv, " ~ factor_sensational + factor_outgroup + factor_peer_viol", sep=""))			
+		form_muslim <- as.formula(paste(dv, " ~ factor_sensational + factor_outgroup + factor_peer_viol + auth_log*factor_outgroup + muslim_sentiment*factor_outgroup + symb_rac_log*factor_outgroup + south + pi_R", sep=""))
+		form_full <- as.formula(paste(dv, " ~ factor_sensational + factor_outgroup + factor_peer_viol + auth_log*factor_outgroup + ethno_og*factor_outgroup + symb_rac_log*factor_outgroup + south + pi_R", sep=""))
 		mod <- lm(as.formula(form), data = data)
 		i <- i+1
 		mods[[i]] <- mod
@@ -55,6 +53,10 @@ run_ATE_mod <- function(dvs, ivs, emotion=FALSE) {
 		i <- i+1
 		mod_full <- coeftest(mod_full, vcov = vcovHC(mod_full, type="HC1"))
 		mods[[i]] <- mod_full
+		mod_muslim <- lm(as.formula(form_muslim), data = data)
+		i <- i+1
+		mod_muslim <- coeftest(mod_muslim, vcov = vcovHC(mod_muslim, type="HC1"))
+		mods[[i]] <- mod_muslim
 		conf <- confint(mod)
 		for (iv in ivs) {
 			b <- coef(summary(mod))[iv,][[1]]
@@ -98,7 +100,7 @@ plot_effects <- function(df, fn, on, pd=0.9, lp1=.7, lp2=.8, lpb=FALSE, lfont=9)
 
 ## Save TeX tables function
 save_tables <- function(mods, fn, on, title, cl=covariate_labs, stretch=TRUE) {
-	output <- capture.output(stargazer(mods, title=title, header=FALSE, omit = c("Constant", "(Intercept)"), table.placement = "H", omit.stat=c("rsq", "adj.rsq", "f", "ser", "ll", "aic"),dep.var.labels.include=FALSE, model.names=FALSE, covariate.labels=cl, column.labels=rep(on, each=2)))
+	output <- capture.output(stargazer(mods, title=title, header=FALSE, omit = c("Constant", "(Intercept)"), table.placement = "H", omit.stat=c("rsq", "adj.rsq", "f", "ser", "ll", "aic"),dep.var.labels.include=FALSE, model.names=FALSE, covariate.labels=cl, column.labels=rep(on, each=3)))
 	if (stretch == TRUE) {
 		output <- gsub("\\begin{tabular}", "\\resizebox{\\textwidth}{!}{\\begin{tabular}", output, fixed=TRUE)
 		output <- gsub("\\end{tabular}", "\\end{tabular}}", output, fixed=TRUE)
@@ -126,7 +128,7 @@ title <- "OLS Model for Propensity to Post a Comment"
 save_tables(commenter$mods, "../tables/ATE_commenter.tex", c("Posted a Comment"), title, stretch=FALSE)
 
 # Demonstrate non-random selection into commenting
-selection <- glm(commenter ~ as.numeric(gender) + age + education + auth_log + ethno_og + symb_rac_log + south + pi_R, family = binomial(link = "logit"), data = data)
+selection <- glm(commenter ~ gender + age + education + auth_log + ethno_og + symb_rac_log + south + pi_R, family = binomial(link = "logit"), data = data)
 title <- "Logit Model for Propensity to Post a Comment"
 save_tables(selection, "../tables/com_selection.tex", c("Posted a Comment"), title, cl=c("Gender", "Age", "Education", "Authoritarian (Log)", "Ethnocentrism (Log)", "Symbolic Racism (Log)", "South", "Republican"), stretch=FALSE)
 
@@ -323,6 +325,72 @@ title <- "Descriptive Statistics for Behavioral Indicators"
 vars <- c("video_link", "com_viol_report", "com_info_report", "com_pos_report", "com_viol_like", "com_info_like", "com_pos_like", "commenter", "violence_com", "lethal_com", "extrajudicial_com", "dehumanizing_com", "demonizing_com", "group_com", "ingroup_com", "anger_com", "disgust_com", "sadness_com", "fear_com", "anxiety_com")
 print_stats(title, vars, "../tables/d_stats_beh.tex")
 
+## Balance Figures
+
+for (i in 1:length(treatments)) {
+	## Party ID balance
+	party_ids <- c('Democrat', 'Republican', 'Independent', 'No Preference')
+	dat <- data.frame(party_id = rep(party_ids, 2))
+	n <- length(party_ids)
+	dat[ivs[i]] = c(rep(0, n), rep(1, n))
+	control_n <- sapply(party_ids, function (x) nrow(data[data[ivs[i]] == 0 & data$party_id == x, ]))
+	treat_n <- sapply(party_ids, function (x) nrow(data[data[ivs[i]] == 1 & data$party_id == x, ]))
+	dat$n <- c(control_n, treat_n)
+	dat$prop <- c(control_n/nrow(data[data[ivs[i]] == 0, ]), treat_n/nrow(data[data[ivs[i]] == 1, ]))
+	dat$party_id <- factor(dat$party_id, levels = party_ids)
+
+	party_id <- ggplot(dat, aes(x=party_id, y = prop, fill = factor(.data[[ivs[i]]], labels = c("Control", "Treated")))) +
+		geom_bar(position = "dodge", stat = "identity") +
+		labs(x="Party ID",y="Proportion")+
+		scale_fill_manual(values=cbPalette, name = treatments[i]) +
+		theme(legend.position="top")
+
+	## Gender balance
+	genders <- c('Female', 'Male', 'Other')
+	dat <- data.frame(gender = rep(genders, 2))
+	n <- length(genders)
+	dat[ivs[i]] = c(rep(0, n), rep(1, n))
+	control_n <- sapply(genders, function (x) nrow(data[data[ivs[i]] == 0 & data$gender == x, ]))
+	treat_n <- sapply(genders, function (x) nrow(data[data[ivs[i]] == 1 & data$gender == x, ]))
+	dat$n <- c(control_n, treat_n)
+	dat$prop <- c(control_n/nrow(data[data[ivs[i]] == 0, ]), treat_n/nrow(data[data[ivs[i]] == 1, ]))
+
+	gender <- ggplot(dat, aes(x=gender, y = prop, fill = factor(.data[[ivs[i]]], labels = c("Control", "Treated")))) +
+		geom_bar(position = "dodge", stat = "identity") +
+		labs(x="Gender",y="Proportion")+
+		scale_fill_manual(values=cbPalette, name = treatments[i]) +
+		theme(legend.position="top")
+
+	## Ethnicity balance
+	eths <- c('Native American', 'Asian/Pacific Islander', 'African/Afro-Caribbean', 'Hispanic/Latino', 'Other', 'Mixed', 'White')
+
+	n <- length(eths)
+	dat <- data.frame(ethnicity = rep(eths, 2))
+	dat[ivs[i]] = c(rep(0, n), rep(1, n))
+	control_n <- sapply(eths, function (x) nrow(data[grepl(x, data$ethnicity),]))
+	treat_n <- sapply(eths, function (x) nrow(data[grepl(x, data$ethnicity),]))
+	dat$n <- c(control_n, treat_n)
+	dat$prop <- c(control_n/nrow(data[data[ivs[i]] == 0, ]), treat_n/nrow(data[data[ivs[i]] == 1, ]))
+	dat$ethnicity <- factor(dat$ethnicity, levels = c('White', 'African/Afro-Caribbean', 'Asian/Pacific Islander', 'Hispanic/Latino', 'Mixed', 'Native American', 'Other'))
+	ethnicity <- ggplot(dat, aes(x=ethnicity, y = prop, fill = factor(.data[[ivs[i]]], labels = c("Control", "Treated")))) +
+		geom_bar(position = "dodge", stat = "identity") +
+		labs(x="Ethnicity",y="Proportion")+
+		scale_fill_manual(values=cbPalette, name = treatments[i]) +
+		theme(legend.position="top", axis.text.x=element_text(angle=-15, vjust = 1.25, hjust=0))
+
+	## Age balance
+	age <- ggplot(data[!is.na(data[[ivs[i]]]),], aes(x=age, fill = factor(.data[[ivs[i]]], labels = c("Control", "Treated")))) +
+		geom_density(alpha=0.25) +
+		scale_fill_manual(values=cbPalette, name = treatments[i]) +
+		theme(legend.position="top") +
+		labs(x="Age",y="Density")
+
+	ggsave(file=paste("../figures/bal_party_id_", ivs[i], ".pdf", sep=""), party_id, width = 8, height = 5)
+	ggsave(file=paste("../figures/bal_gender_", ivs[i], ".pdf", sep=""), gender, width = 8, height = 5)
+	ggsave(file=paste("../figures/bal_ethnicity_", ivs[i], ".pdf", sep=""), ethnicity, width = 8, height = 5)
+	ggsave(file=paste("../figures/bal_age_", ivs[i], ".pdf", sep=""), age, width = 8, height = 5)
+}
+
 ## Distribution of Likes
 
 comment_types <- c("com_viol_like", "com_pos_like", "com_info_like")
@@ -441,6 +509,15 @@ text_data$survey_code <- NULL
 oe_corpus <- corpus(as.character(text_data$text), docvars = text_data[,ivs])
 oe_dfm <- dfm(oe_corpus)
 oe_dfm_stm <- convert(oe_dfm, to = "stm")
+
+# Find keywords for each treatment group
+
+for (iv in ivs) {
+	fn <- paste("../figures/keywords_", iv ,".pdf", sep='')
+	keys <- textstat_keyness(oe_dfm, target = docvars(oe_dfm, iv) == 1, measure="chi2")
+	textplot_keyness(keys, n=10) + scale_color_manual(labels = c("Treatment", "Control"), values = cbPalette[2:3]) + labs(x="Chi-Squared Value", color = "")
+	ggsave(fn, width = 8, height = 6)
+}
 
 # Select the best model based on semantic coherance, held out likelihood, and qualitative assessment of topic coherence
 

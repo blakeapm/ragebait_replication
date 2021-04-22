@@ -81,7 +81,7 @@ for i, row in survey_web_comment_data.iterrows():
 data.to_csv('../data/complete_survey_data.csv', index=False)
 
 # Remove pilot respondents (observations 1-29)
-data = data.ix[29:,]
+data = data.iloc[29:]
 
 # Exclude bad data for analysis
 data = data.loc[data.exclude.isin(["Keep", "Attention check"]) | data.exclude.isnull(),]
@@ -119,10 +119,18 @@ data['ethno_tru_og'] = data[['ethno_tru_black','ethno_tru_asian','ethno_tru_hisp
 data['ethno_og'] = data[['ethno_we_og','ethno_int_og','ethno_tru_og']].astype('float64').mean(axis=1)
 data['ethno_og'] = np.abs(100 - data['ethno_og'])
 
-# Create variable for white; white = 1
+# Create anti-muslim sentiment scale
 
-data['white'] = 0
-data.loc[data.ethnicity == 'White', 'white'] = 1
+data['muslim_sentiment'] = data[['ethno_we_muslim','ethno_int_muslim','ethno_tru_muslim']].astype('float64').mean(axis=1)
+data['muslim_sentiment'] = np.abs(100 - data['muslim_sentiment'])
+
+# Create variables for ethnicities
+
+eths = ['Native American', 'Asian/Pacific Islander', 'African/Afro-Caribbean', 'Hispanic/Latino', 'Other', 'Mixed', 'White']
+eth_nm = ['native', 'asian', 'african', 'hispanic', 'eth_other', 'eth_mixed', 'white']
+for i, eth in enumerate(eths):
+	data[eth_nm[i]] = 0
+	data.loc[data.ethnicity.str.contains(eth), eth_nm[i]] = 1
 
 # Religious Fundamentalism
 
