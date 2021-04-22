@@ -1,0 +1,396 @@
+\documentclass[]{article}
+\usepackage{setspace}
+\usepackage{lscape}
+\usepackage{tikz}
+\usepackage{float}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\usepackage{adjustbox,lipsum}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage[section]{placeins}
+\usepackage[left=1in, right=1in, top=1in]{geometry}
+\renewcommand{\arraystretch}{.7}
+\doublespacing
+\renewcommand\thefigure{S\arabic{figure}}
+\setcounter{figure}{0}    
+\renewcommand\thetable{S\arabic{table}}    
+\setcounter{table}{0}
+
+\title{\vspace{-4em}Supplementary Materials for ``How Sensational Content and Outgroup Cues Strengthen Support for Violence and Anti-Muslim Policies''}
+\date{\vspace{-10ex}}
+
+\begin{document}
+
+%\setcounter{page}{20}
+
+\maketitle 
+\tableofcontents
+\newpage
+\setcounter{page}{1}
+\section{Sampling Procedures}
+
+We recruited our respondents through Amazon Mechanical Turk in early December 2018. We advertised the Human Intelligence Task (HIT) as a study on media consumption behavior and compensated respondents 2.11 USD for taking our 15-minute survey, which corresponded to the hourly rate of the federal minimum wage in 2018. After consenting to the take survey, respondents were directed to an external website that hosted an embedded pre-treatment and post-treatment survey (hosted through Qualtrics) as well as the AP-styled news website and article. 
+
+\subsection{Website Design and Randomization}
+
+The interactive survey web app was custom coded using the Python Django web framework and deployed to the web using the Amazon Elastic Beanstalk service. It was designed to be responsive, working on any screen size or device. Click data, comments, and browser metadata were stored in a PostgreSQL database hosted on Amazon Relational Database Services (RDS).
+
+In the web app view, we displayed the informed consent script. When respondents consented and continued to the next view, they were asked to provide their MTurk Worker ID to ensure that they did not fill out the survey twice. They were then asked to share their location to ensure that they were located within the United States. After these first two views, respondents were taken to the pre-treatment survey, followed by the article vignette.
+
+We reverse-engineered the AP website article view for our vignette to maximize its credibility and, thereby, the external validity of our inferences. When the respondent loaded the article vignette, the web app randomly assigned them to one of eight possible treatment combinations which were dynamically displayed in a Django template view. After an interstitial loading page was displayed with a loading bar and a message reading, "Loading External Website...," the article vignette view loaded in an iframe below instructions for this portion of the survey.
+
+Treatments were randomly assigned through the dynamic web-app which was hosted on Amazon Web Services (AWS). The web app assigned each respondent a randomly generated 4-character alphanumeric code. This code was used to match click, comment, and treatment assignment data with the respondent's Qualtrics survey responses. We manually checked survey codes for typographical errors to ensure proper matching.
+
+The comment section was interactive, allowing users to like, report, and comment on the article. The web app tracked comments, likes, reports, and link clicks using AJAX to communicate between the web client and the PostgreSQL database. Each interaction was saved with the respondent's survey ID to facilitate matching these data with Qualtrics data.
+
+\vspace{-1em}
+\begin{figure}[!htbp]
+  \centering
+  \caption{Loading Interstitial for the Website}
+  \vspace{1em}
+  \includegraphics[width=.9\textwidth]{figures/loading_interstitial.pdf}\\
+  \label{hom_uns}
+\end{figure}
+
+\subsection{Balance Table}
+
+
+
+\subsection{Exclusion Criteria}
+
+We drew an initial sample of 1879 respondents, of which we excluded 224 according to the following criteria.
+
+\textit{Bots and Fraudulent Accounts.} Many accounts on the Amazon Mechanical Turk platform are fraudulent and needed to be screened out of our data. We anticipated this and used four methods to screen them out of our data. First, we required users to enter a survey completion code on the Amazon Mechanical Turk platform. This code was displayed to them after completion of the survey. They were also required to provide their MTurk ID within the survey to ensure that their response could be matched to their MTurk account. This limited each MTurk ID to one survey response. Second, because many fraudulent users simultaneously take surveys from multiple MTurk accounts, we collected data on the user's device (screen size, battery level, browser, etc.), location, and IP address to identify users who are completing the survey multiple times from the same machine. Third, to identify automated survey responses from bots, we read every open-ended response and excluded obvious machine-generated text or text scraped from the internet using reference words from the open-ended questions. Finally, we asked a very simple attention check question at the end of the survey. After reviewing failed attention checks, most were from accounts that appeared to be automated. Those who failed the attention check but did not appear to be bots were kept in the sample.
+
+\textit{Duplicates.} Many subjects took the survey several times due to an error in our screening procedure that was fixed early on. For these subjects we dropped all but the first response from our sample using their MTurk ID, as described above.
+
+\textit{Extreme Non-compliers.} Respondents who finished the survey in under 7 minutes were excluded, since it was not within reasonable expectations that they could have completed the survey within that amount of time.
+
+\textit{Non-US Residents.} Since our relevant population was US residents, we required respondents to reside in the United States. However, because MTurk's screening criteria is not perfect, several respondents who were from outside the United States took the survey. We screened these respondents by using geolocation and IP address filters and identifying non-English open-ended responses.
+
+\section{Survey Experiment Vignettes}
+
+\subsection{Article Vignettes}
+
+\begin{figure}[!htbp]
+  \centering
+  \caption{Vignette with Objective Content and Unspecified Perpetrator}
+  \vspace{1em}
+  \includegraphics[width=.92\textwidth]{figures/hom_uns.pdf}\\
+  \label{hom_uns}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption{Vignette with Moral-Emotional Content and Muslim Refugee Perpetrator}
+  \vspace{1em}
+  \includegraphics[width=.92\textwidth]{figures/hom_mus.pdf}\\
+  \label{hom_mus}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption{Comment List with Most Upvoted Violent Comment}
+  \vspace{1em}
+  \includegraphics[width=.88\textwidth]{figures/comments.pdf}\\
+  \label{com_vio}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption{Comment List with Most Upvoted Conciliatory Comment }
+  \vspace{1em}
+  \includegraphics[width=.88\textwidth]{figures/comments_2.pdf}\\
+  \label{com_neu}
+\end{figure}
+
+\newpage
+
+\section{Measurement Validity Checks}
+
+\begin{figure}[H]
+  \centering
+  \caption{Correlation of Measures of Support for Violence}
+  \vspace{1em}
+  \includegraphics[width=.7\textwidth]{figures/corr_plot.pdf}\\
+\end{figure}
+
+\input{tables/val_check_mod.tex}
+
+%\newpage
+
+%\section{Descriptive Statistics}
+
+%\input{tables/d_stats_survey.tex}
+%\input{tables/d_stats_beh.tex}
+%\input{tables/d_stats_oe.tex}
+
+%\newpage
+%\vspace{-1em}
+
+\section{Attitudes Towards Violence}\vspace{-1em}
+
+\begin{figure}[!htbp]
+  \centering
+  \caption{Support for Judicial and Extrajudicial Punishment by Treatment Condition (Direct Measures)}
+  \includegraphics[width=\textwidth]{figures/ATE_punish_hom_outcomes.pdf}
+\end{figure}
+\subsection{Judicial Violence (Direct)}
+
+\input{tables/punish_jud_ate.tex}
+
+\subsection{Extrajudicial Violence (Direct)}
+
+\input{tables/punish_exjud_d_ate.tex}
+
+\subsection{Extrajudicial Violence (Indirect)}
+
+\input{tables/punish_exjud_i_ate.tex}
+
+{\setstretch{1.25}
+\section{Attitudes Towards Outgroups}\vspace{-1em}
+
+\input{tables/punitive_ate.tex}\vspace{-1.5em}
+
+\section{Behavioral Indicators}\vspace{-1em}
+
+\input{tables/behavioral_ate.tex}
+}
+
+\section{Emotional Mediators}
+
+\input{tables/emotion_ate.tex}
+
+\section{Causal Mediation Analysis}
+
+\usetikzlibrary{positioning}
+
+\begin{figure}[H]
+\caption{Causal Mediation Analysis for Anger}\vspace{.5em}
+\centering
+\vspace{2em}
+\input{figures/med_emo_ang_hom.tex}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Causal Mediation Analysis for Anxiety}\vspace{.5em}
+\centering
+\vspace{2em}
+\input{figures/med_emo_anx_hom.tex}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Causal Mediation Analysis for Fear}\vspace{.5em}
+\centering
+\vspace{2em}
+\input{figures/med_emo_fea_hom.tex}
+\end{figure}
+
+\section{Open-Ended Responses}
+
+%\subsection{Structural Topic Model of Open-Ended Responses}\vspace{-1.25em}
+
+%\begin{figure}[H]
+%  \caption{Topic Probabilities}
+%  \centering
+%  \includegraphics[width=\textwidth]{figures/topic_props.pdf}\\
+%\end{figure}\vspace{-2.25em}
+
+%\begin{figure}[H]
+%  \caption{Topic Effects by Treatment Group}
+%  \centering
+%  \includegraphics[width=\textwidth]{figures/topic_effects.pdf}\\
+%\end{figure}
+
+%\begin{table}[H]
+%  \setstretch{1.5}
+%  \centering
+%  \caption{Most Representative Responses by Topic}
+%  \vspace{1em}
+%  \resizebox{\textwidth}{!}{
+%  \begin{tabular}{|p{.075\textwidth}|p{.8\textwidth}|p{.05\textwidth}|p{.05\textwidth}|p{.05\textwidth}|}
+%	\hline
+%    \textbf{Topic} & \textbf{Text} & \textbf{Peer} & \textbf{Sens.} & \textbf{Out.} \\\hline
+%    Topic 1 & The loss of a child, especially by violence, is unthinkable. I understand the frustration of the locals but vigilante justice is equally unthinkable.  taking the law into one's own hands is despicable. Vigilante justice is never warranted and is horrible. It is outlawed for a reason. & Yes & No & No \\ \hline
+%    Topic 2 & Child murderers are some of the worst scum this world can produce. Murderes of any kind are terrible but people that prey on the weakest and most vulnerable aspects of our society are at the bottom of the sludge pit. This man needs to be tried and convicted. A frothing mob cannot be expected to make rational choices and lynching someone in the street is garbage we used to do hundreds of years ago and garbage that third world hellholes continue to do today. I understand being enraged but let the police do their work. & No & No & No \\ \hline
+%    Topic 3 & the man got what he deserved. he should get more than that though. anyone who hurts a child should get the strictest punishment he got what he deserved. no one should hurt an innocent defenseless child & Yes & No & Yes \\ \hline
+%    Topic 4 & I felt anger and fear. I felt extreme sadness for the victim and the victim's family. I feel confusion about something like this could happen. I felt the attack of the perpetrator were justified. It was only a small step of vindication that the victim and the victim's family deserve. & No & Yes & Yes \\ \hline
+%    Topic 5 & As noted in my comment regarding the article provided, there is far too little detail to draw any conclusions regarding the incident other than it is profoundly horrific and sad.  I have many questions to be answered to even begin to form a cohesive assessment of this tragedy. Again, there is not enough information to draw an intelligent conclusion.  One can only presume that the emotional reaction of the bystanders was reactionary and vengeful due to the immediacy of the event. & Yes & Yes & No \\ \hline
+%    Topic 6 & I feel like people should not be driven to these extremes. It is a little ridiculous that humans act like this. I hope everyone begins to chill more I feel like he is someone to be punished but if you are to do the same thing as he doing you are no better. To become what others are negatively will ultimately be the same fate. & No & No & Yes \\ \hline
+%  \end{tabular}
+%  }
+%\end{table}
+
+\subsection{Key Words in Open-Ended Outcomes by Treatment Group}
+
+\begin{figure}[H]
+  \caption{Key Terms in Sensational Treatment Group}
+  \centering
+  \includegraphics[width=.7\textwidth]{figures/keywords_factor_sensational.pdf}\\
+\end{figure}
+
+\begin{figure}[H]
+  \caption{Key Terms in Peer Violence Treatment Group}
+  \centering
+  \includegraphics[width=.7\textwidth]{figures/keywords_factor_peer_viol.pdf}\\
+\end{figure}
+
+\begin{figure}[H]
+  \caption{Key Terms in Outgroup Treatment Group}
+  \centering
+  \includegraphics[width=.7\textwidth]{figures/keywords_factor_outgroup.pdf}\\
+\end{figure}
+
+
+\subsection{Open-Ended Outcomes by Treatment Group}
+
+\input{tables/oe_ate.tex}
+
+%\subsection{Log Odds of Terms by Treatment Group}
+
+%To summarize key terms that are most predictive of the treatments experienced by the author, we ran 1000 $\ell_2$ normalized logistic regression models on bootstrap samples of our data. The outcome of each model was the binary treatment indicator and predictors were spelling-corrected, lemmatized unigrams to 5-grams of all words in the vocabulary that appeared in more than 5 open-ended responses. By bootstrapping these coefficient estimates, we mitigate the problem of arbitrary shrinkage of one collinear term over the other. Figures 5 to 7 show the distributions of the 25 largest and 25 smallest coefficients that are significant at the $p = .05$ level. These represent the terms that are most predictive of the treatment assignment.
+
+%\begin{figure}[H]
+%  \caption{Log Odds of Terms in Sensational Treatment Group}
+%  \centering
+%  \includegraphics[width=.92\textwidth]{figures/factor_sensational_terms.pdf}\\
+%\end{figure}
+
+%\begin{figure}[H]
+%  \caption{Log Odds of Terms in Peer Violence Treatment Group}
+%  \centering
+%  \includegraphics[width=\textwidth]{figures/factor_peer_viol_terms.pdf}\\
+%\end{figure}
+
+%\begin{figure}[H]
+%  \caption{Log Odds of Terms in Outgroup Treatment Group}
+%  \centering
+%  \includegraphics[width=\textwidth]{figures/factor_outgroup_terms.pdf}\\
+%\end{figure}
+
+\subsection{Example Open-ended Responses by Condition}
+
+\begin{enumerate}
+    \item \textbf{Extrajudicial Violence and Lethal Violence (Outgroup Baseline, Sensational Treatment, Peer-Violence Treatment)}: ``I am absolutely disgusted, appalled, and at a loss for words about this attack. They should kill him in the street. Let everyone who wants a piece of him have a piece of him.''
+    \item \textbf{Lethal Violence (Outgroup Treatment, Sensational Treatment, Peer-Violence Baseline)}: ``I think the perpetrator got what he deserved.  It is a shame that they didn't kill him the same way he killed the child.  The attackers shouldn't be punished for attacking the perpetrator.''
+    \item \textbf{Judicial Violence (Outgroup Treatment, Sensational Treatment, Peer-Violence Baseline)}: ``Horrible that anyone would want to harm or kill a child. Worst of the worst in society. They should be punished to the fullest extent by the laws.''
+    \item \textbf{Information-Seeking (Outgroup Treatment, Sensational Baseline, Peer Violence Baseline)}: ``I want to know what happened. I want to know if the person that was beat up is the one accused of the murder. I want to know the details''
+    \item \textbf{Information-Seeking (Outgroup Baseline, Sensational Baseline, Peer-Violence Treatment)}: ``I wanted to know more behind it.  My reaction was what happened.  The article only stated that a homicide had occurred to a child and that the victim's identity as well as the perpetrator's identity hadn't been released, but there were not circumstances stated around the incident.''
+    \item \textbf{Cognitive Dissonance (Outgroup Treatment, Sensational Treatment, Peer-Violence Treatment)}: ``It's weird because just not knowing the details, just gut reaction I feel good that the mofo got what he deserved but then I start thinking more and I really don't know any details and the alleged perpetrator has not been convicted. I'm conflicted''
+    \item \textbf{Racism (Outgroup Treatment, Sensational Control, Peer-Violence Treatment)}: ``I wonder if, because he was Muslim, he was unjustly targeted. There didn't seem to be any proof yet of who was responsible. I never agree with using violence to address a violent act.''
+    \item \textbf{Cognitive Dissonance and Racism (Outgroup Treatment, Sensational Treatment, Peer-Violence Treatment)}: ``I was originally thinking "good for them". Then I thought "what if that dude didn't do it and they angry mob just beat up a muslim. Then I felt remorse for the whole situation. ''
+    \item \textbf{Surprise at Lack of Emotion in Article (Outgroup Treatment, Sensational Baseline, Peer-Violence Baseline)}: ``That's one of the most unemotionally written articles I've came across in quiet a while. Most articles are written in a way to elicit feelings of emotion from it's audience. The behavior of the accused is deplorable but the author didn't present it that way. It seemed to be more focused on the attack against the accused.''
+\end{enumerate}
+
+\subsection{Example Comments by Condition}
+
+\begin{enumerate}
+    \item \textbf{Judicial Violence (Outgroup Treatment, Sensational Baseline, Peer-Violence Treatment)}: ``This middle-aged male Muslim refugee who had been living in the community for about one year should be sent back to where he came from and let them deal with him. This person is not going to last very long in prison.''
+    \item \textbf{Judicial and Lethal Violence (Outgroup Baseline, Sensational Baseline, Peer-Violence Treatment)}: ``I think this person should get death penalty for killing a child.''
+    \item \textbf{Lethal Violence (Outgroup Baseline, Sensational Treatment, Peer-Violence Baseline)}: ``They should have killed him right then and there. Hopefully they put him in general population and do not waste tax money protecting him from other inmates.''
+    \item \textbf{Racism (Outgroup Treatment, Sensational Treatment, Peer-Violence Treatment)}: ``This is clearly a hate crime. There's no mention of evidence, since of course they didn't need any to savagely beat a Muslim refugee. This is just more right-wing paranoia, racism, and violence.''
+    \item \textbf{Concerns with Vigilantism (Outgroup Baseline, Sensational Baseline, Peer-Violence Treatment)} ``We should be wary about rushing to judgment.  The murder of a child is a most heinous crime, but unless someone actually witnessed it happen or has incontrovertible proof it is possible that the suspect is actually innocent.  If that is the case then it would turn out that the local residents beat up an innocent man, while the real murderer is out there.'' 
+    \item \textbf{Demonizing (Outgroup Baseline, Sensational Treatment, Peer-Violence Treatment)} ``What is wrong with him? Who can be so cruel!'' 
+    \item \textbf{Dehumanizing and Extrajudicial Violence (Outgroup Baseline, Sensational Baseline, Peer-Violence Treatment)} ``Vigilante justice is the best kind of justice for monsters like this perpetrator!'' 
+\end{enumerate}
+\newpage
+
+\section{Comments}
+
+%\subsection{Comment Likes}
+
+%\begin{figure}[H]
+%  \caption{Bootstrap Proportions of Violent Comment Likes by Treatment Group}\vspace{.5em}
+%  \centering
+%  \includegraphics[width=.94\textwidth]{figures/com_viol_like.pdf}\\
+%\end{figure}
+
+%\begin{figure}[H]
+%  \caption{Bootstrap Proportions of Positive/Conciliatory Comment Likes by Treatment Group}\vspace{.5em}
+%  \centering
+%  \includegraphics[width=.94\textwidth]{figures/com_pos_like.pdf}\\
+%\end{figure}
+
+%\begin{figure}[H]
+%  \caption{Bootstrap Proportions of Information-Seeking Comment Likes by Treatment Group}\vspace{.5em}
+%  \centering
+%  \includegraphics[width=.94\textwidth]{figures/com_info_like.pdf}\\
+%\end{figure}
+
+\subsection{Comment Text Models}
+{\setstretch{1.25}
+\input{tables/ATE_commenter.tex}
+\input{tables/com_selection.tex}
+\input{tables/com_ate_heck.tex}
+\input{tables/additional_text_com.tex}
+\input{tables/additional_text_oe.tex}}
+
+\begin{figure}[!htbp]
+  \centering
+  \caption{Additional Comment Outcomes by Treatment Condition}
+  \includegraphics[width=.85\textwidth]{figures/additional_text_oe.pdf}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \centering
+  \caption{Additional Open-Ended Outcomes by Treatment Condition}
+  \includegraphics[width=.85\textwidth]{figures/additional_text_com.pdf}
+\end{figure}
+
+\newpage
+
+\subsection{Coding Diagrams}
+
+\begin{figure}[H]
+  \centering
+  \caption{Violence Coding Diagram}
+  \vspace{1em}
+  \includegraphics[width=.94\textwidth]{figures/Violence.pdf}\\
+\end{figure}
+
+%\begin{figure}[H]
+%  \centering
+%  \caption{Demonizing and Dehumanizing Coding Diagrams}
+%  \vspace{1em}
+%  \includegraphics[width=.94\textwidth]{figures/DehumanizingDemonizing.pdf}\\
+%\end{figure}
+
+%\begin{figure}[H]
+%  \centering
+%  \caption{Group and Outgroup Coding Diagrams}
+%  \vspace{1em}
+%  \includegraphics[width=.94\textwidth]{figures/GroupOutgroup.pdf}\\
+%\end{figure}
+
+%\begin{figure}[H]
+%  \centering
+%  \caption{Emotion Coding Diagrams}
+%  \vspace{1em}
+%  \includegraphics[width=.94\textwidth]{figures/Emotion.pdf}\\
+%\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \caption{Racism and Social Desirability Coding Diagrams}
+  \vspace{1em}
+  \includegraphics[width=.94\textwidth]{figures/RacismSocialDesirability.pdf}\\
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \caption{Information-Seeking and Fake News Coding Diagrams}
+  \vspace{1em}
+  \includegraphics[width=.94\textwidth]{figures/InfoSeekingFakeNews.pdf}\\
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \caption{Cognitive Dissonance Coding Diagrams}
+  \vspace{1em}
+  \includegraphics[width=.94\textwidth]{figures/CognitiveDissonance.pdf}\\
+\end{figure}
+
+\section{Intercoder Reliability}
+
+\input{tables/icr.tex}
+\end{document}

@@ -1,0 +1,1155 @@
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0377879987846983 
+p-value: 0.08 
+CI 2.5%: -0.000850957587457961 
+CI 97.5%: 0.0710825507170677 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00207475280333426 
+p-value: 0.14 
+CI 2.5%: -0.000386273706244639 
+CI 97.5%: 0.00635845858443707 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0374311798107528 
+p-value: 0.04 
+CI 2.5%: 0.00192597626283521 
+CI 97.5%: 0.0717619080695296 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00161159278128722 
+p-value: 0.26 
+CI 2.5%: -0.000802449549835437 
+CI 97.5%: 0.00526878215810586 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0551704959684476 
+p-value: 0.06 
+CI 2.5%: -0.00127948227859085 
+CI 97.5%: 0.112671699136344 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00835443543713807 
+p-value: 0.08 
+CI 2.5%: -0.000389789696415508 
+CI 97.5%: 0.0156787820627494 
+
+DV: extrajudicial 
+Mediator: emo_ang_hom 
+ACME: 0.0685380564390836 
+p-value: 0 
+CI 2.5%: 0.0103620631632282 
+CI 97.5%: 0.121467815600172 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0377879987846983 
+p-value: 0.08 
+CI 2.5%: -0.000850957587457961 
+CI 97.5%: 0.0710825507170677 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00207475280333426 
+p-value: 0.14 
+CI 2.5%: -0.000386273706244639 
+CI 97.5%: 0.00635845858443707 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0374311798107528 
+p-value: 0.04 
+CI 2.5%: 0.00192597626283521 
+CI 97.5%: 0.0717619080695296 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00161159278128722 
+p-value: 0.26 
+CI 2.5%: -0.000802449549835437 
+CI 97.5%: 0.00526878215810586 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0551704959684476 
+p-value: 0.06 
+CI 2.5%: -0.00127948227859085 
+CI 97.5%: 0.112671699136344 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00835443543713807 
+p-value: 0.08 
+CI 2.5%: -0.000389789696415508 
+CI 97.5%: 0.0156787820627494 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0374023662379139 
+p-value: 0.04 
+CI 2.5%: 0.00194227548785589 
+CI 97.5%: 0.0710752926560265 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.0024517934367305 
+p-value: 0.08 
+CI 2.5%: -6.28189157086613e-05 
+CI 97.5%: 0.00624805599589441 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0329907397932384 
+p-value: 0.08 
+CI 2.5%: -0.00305552905694631 
+CI 97.5%: 0.0783280016425336 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00180498395502306 
+p-value: 0.18 
+CI 2.5%: -0.000495259031199095 
+CI 97.5%: 0.00530352887733736 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0577623274457535 
+p-value: 0.04 
+CI 2.5%: 0.01428497039175 
+CI 97.5%: 0.117011168560199 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00796336799683199 
+p-value: 0.04 
+CI 2.5%: 0.000854384864319726 
+CI 97.5%: 0.016078506892396 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0377879987846983 
+p-value: 0.08 
+CI 2.5%: -0.000850957587457961 
+CI 97.5%: 0.0710825507170677 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00207475280333426 
+p-value: 0.14 
+CI 2.5%: -0.000386273706244639 
+CI 97.5%: 0.00635845858443707 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0374311798107528 
+p-value: 0.04 
+CI 2.5%: 0.00192597626283521 
+CI 97.5%: 0.0717619080695296 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00161159278128722 
+p-value: 0.26 
+CI 2.5%: -0.000802449549835437 
+CI 97.5%: 0.00526878215810586 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0551704959684476 
+p-value: 0.06 
+CI 2.5%: -0.00127948227859085 
+CI 97.5%: 0.112671699136344 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00835443543713807 
+p-value: 0.08 
+CI 2.5%: -0.000389789696415508 
+CI 97.5%: 0.0156787820627494 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0374023662379139 
+p-value: 0.04 
+CI 2.5%: 0.00194227548785589 
+CI 97.5%: 0.0710752926560265 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.0024517934367305 
+p-value: 0.08 
+CI 2.5%: -6.28189157086613e-05 
+CI 97.5%: 0.00624805599589441 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0329907397932384 
+p-value: 0.08 
+CI 2.5%: -0.00305552905694631 
+CI 97.5%: 0.0783280016425336 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00180498395502306 
+p-value: 0.18 
+CI 2.5%: -0.000495259031199095 
+CI 97.5%: 0.00530352887733736 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0577623274457535 
+p-value: 0.04 
+CI 2.5%: 0.01428497039175 
+CI 97.5%: 0.117011168560199 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00796336799683199 
+p-value: 0.04 
+CI 2.5%: 0.000854384864319726 
+CI 97.5%: 0.016078506892396 
+
+DV: extrajudicial 
+Mediator: emo_ang_hom 
+ACME: 0.0685380564390836 
+p-value: 0 
+CI 2.5%: 0.0103620631632282 
+CI 97.5%: 0.121467815600172 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0377879987846983 
+p-value: 0.08 
+CI 2.5%: -0.000850957587457961 
+CI 97.5%: 0.0710825507170677 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00207475280333426 
+p-value: 0.14 
+CI 2.5%: -0.000386273706244639 
+CI 97.5%: 0.00635845858443707 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0374311798107528 
+p-value: 0.04 
+CI 2.5%: 0.00192597626283521 
+CI 97.5%: 0.0717619080695296 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00161159278128722 
+p-value: 0.26 
+CI 2.5%: -0.000802449549835437 
+CI 97.5%: 0.00526878215810586 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0551704959684476 
+p-value: 0.06 
+CI 2.5%: -0.00127948227859085 
+CI 97.5%: 0.112671699136344 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00835443543713807 
+p-value: 0.08 
+CI 2.5%: -0.000389789696415508 
+CI 97.5%: 0.0156787820627494 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0374023662379139 
+p-value: 0.04 
+CI 2.5%: 0.00194227548785589 
+CI 97.5%: 0.0710752926560265 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.0024517934367305 
+p-value: 0.08 
+CI 2.5%: -6.28189157086613e-05 
+CI 97.5%: 0.00624805599589441 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0329907397932384 
+p-value: 0.08 
+CI 2.5%: -0.00305552905694631 
+CI 97.5%: 0.0783280016425336 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00180498395502306 
+p-value: 0.18 
+CI 2.5%: -0.000495259031199095 
+CI 97.5%: 0.00530352887733736 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0577623274457535 
+p-value: 0.04 
+CI 2.5%: 0.01428497039175 
+CI 97.5%: 0.117011168560199 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00796336799683199 
+p-value: 0.04 
+CI 2.5%: 0.000854384864319726 
+CI 97.5%: 0.016078506892396 
+
+DV: extrajudicial 
+Mediator: emo_ang_hom 
+ACME: 0.0685380564390836 
+p-value: 0 
+CI 2.5%: 0.0103620631632282 
+CI 97.5%: 0.121467815600172 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0377879987846983 
+p-value: 0.08 
+CI 2.5%: -0.000850957587457961 
+CI 97.5%: 0.0710825507170677 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00207475280333426 
+p-value: 0.14 
+CI 2.5%: -0.000386273706244639 
+CI 97.5%: 0.00635845858443707 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0374311798107528 
+p-value: 0.04 
+CI 2.5%: 0.00192597626283521 
+CI 97.5%: 0.0717619080695296 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00161159278128722 
+p-value: 0.26 
+CI 2.5%: -0.000802449549835437 
+CI 97.5%: 0.00526878215810586 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0551704959684476 
+p-value: 0.06 
+CI 2.5%: -0.00127948227859085 
+CI 97.5%: 0.112671699136344 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00835443543713807 
+p-value: 0.08 
+CI 2.5%: -0.000389789696415508 
+CI 97.5%: 0.0156787820627494 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0374023662379139 
+p-value: 0.04 
+CI 2.5%: 0.00194227548785589 
+CI 97.5%: 0.0710752926560265 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.0024517934367305 
+p-value: 0.08 
+CI 2.5%: -6.28189157086613e-05 
+CI 97.5%: 0.00624805599589441 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0329907397932384 
+p-value: 0.08 
+CI 2.5%: -0.00305552905694631 
+CI 97.5%: 0.0783280016425336 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00180498395502306 
+p-value: 0.18 
+CI 2.5%: -0.000495259031199095 
+CI 97.5%: 0.00530352887733736 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0577623274457535 
+p-value: 0.04 
+CI 2.5%: 0.01428497039175 
+CI 97.5%: 0.117011168560199 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00796336799683199 
+p-value: 0.04 
+CI 2.5%: 0.000854384864319726 
+CI 97.5%: 0.016078506892396 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0377879987846983 
+p-value: 0.08 
+CI 2.5%: -0.000850957587457961 
+CI 97.5%: 0.0710825507170677 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00207475280333426 
+p-value: 0.14 
+CI 2.5%: -0.000386273706244639 
+CI 97.5%: 0.00635845858443707 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0374311798107528 
+p-value: 0.04 
+CI 2.5%: 0.00192597626283521 
+CI 97.5%: 0.0717619080695296 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00161159278128722 
+p-value: 0.26 
+CI 2.5%: -0.000802449549835437 
+CI 97.5%: 0.00526878215810586 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0551704959684476 
+p-value: 0.06 
+CI 2.5%: -0.00127948227859085 
+CI 97.5%: 0.112671699136344 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00835443543713807 
+p-value: 0.08 
+CI 2.5%: -0.000389789696415508 
+CI 97.5%: 0.0156787820627494 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0377879987846983 
+p-value: 0.08 
+CI 2.5%: -0.000850957587457961 
+CI 97.5%: 0.0710825507170677 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00207475280333426 
+p-value: 0.14 
+CI 2.5%: -0.000386273706244639 
+CI 97.5%: 0.00635845858443707 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0374311798107528 
+p-value: 0.04 
+CI 2.5%: 0.00192597626283521 
+CI 97.5%: 0.0717619080695296 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00161159278128722 
+p-value: 0.26 
+CI 2.5%: -0.000802449549835437 
+CI 97.5%: 0.00526878215810586 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0551704959684476 
+p-value: 0.06 
+CI 2.5%: -0.00127948227859085 
+CI 97.5%: 0.112671699136344 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00835443543713807 
+p-value: 0.08 
+CI 2.5%: -0.000389789696415508 
+CI 97.5%: 0.0156787820627494 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0377879987846983 
+p-value: 0.08 
+CI 2.5%: -0.000850957587457961 
+CI 97.5%: 0.0710825507170677 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00207475280333426 
+p-value: 0.14 
+CI 2.5%: -0.000386273706244639 
+CI 97.5%: 0.00635845858443707 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0374311798107528 
+p-value: 0.04 
+CI 2.5%: 0.00192597626283521 
+CI 97.5%: 0.0717619080695296 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00161159278128722 
+p-value: 0.26 
+CI 2.5%: -0.000802449549835437 
+CI 97.5%: 0.00526878215810586 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0551704959684476 
+p-value: 0.06 
+CI 2.5%: -0.00127948227859085 
+CI 97.5%: 0.112671699136344 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00835443543713807 
+p-value: 0.08 
+CI 2.5%: -0.000389789696415508 
+CI 97.5%: 0.0156787820627494 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0374023662379139 
+p-value: 0.04 
+CI 2.5%: 0.00194227548785589 
+CI 97.5%: 0.0710752926560265 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.0024517934367305 
+p-value: 0.08 
+CI 2.5%: -6.28189157086613e-05 
+CI 97.5%: 0.00624805599589441 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0329907397932384 
+p-value: 0.08 
+CI 2.5%: -0.00305552905694631 
+CI 97.5%: 0.0783280016425336 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00180498395502306 
+p-value: 0.18 
+CI 2.5%: -0.000495259031199095 
+CI 97.5%: 0.00530352887733736 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0577623274457535 
+p-value: 0.04 
+CI 2.5%: 0.01428497039175 
+CI 97.5%: 0.117011168560199 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00796336799683199 
+p-value: 0.04 
+CI 2.5%: 0.000854384864319726 
+CI 97.5%: 0.016078506892396 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0377879987846983 
+p-value: 0.08 
+CI 2.5%: -0.000850957587457961 
+CI 97.5%: 0.0710825507170677 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00207475280333426 
+p-value: 0.14 
+CI 2.5%: -0.000386273706244639 
+CI 97.5%: 0.00635845858443707 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0374311798107528 
+p-value: 0.04 
+CI 2.5%: 0.00192597626283521 
+CI 97.5%: 0.0717619080695296 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00161159278128722 
+p-value: 0.26 
+CI 2.5%: -0.000802449549835437 
+CI 97.5%: 0.00526878215810586 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0551704959684476 
+p-value: 0.06 
+CI 2.5%: -0.00127948227859085 
+CI 97.5%: 0.112671699136344 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00835443543713807 
+p-value: 0.08 
+CI 2.5%: -0.000389789696415508 
+CI 97.5%: 0.0156787820627494 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0377879987846983 
+p-value: 0.08 
+CI 2.5%: -0.000850957587457961 
+CI 97.5%: 0.0710825507170677 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00207475280333426 
+p-value: 0.14 
+CI 2.5%: -0.000386273706244639 
+CI 97.5%: 0.00635845858443707 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0374311798107528 
+p-value: 0.04 
+CI 2.5%: 0.00192597626283521 
+CI 97.5%: 0.0717619080695296 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00161159278128722 
+p-value: 0.26 
+CI 2.5%: -0.000802449549835437 
+CI 97.5%: 0.00526878215810586 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0551704959684476 
+p-value: 0.06 
+CI 2.5%: -0.00127948227859085 
+CI 97.5%: 0.112671699136344 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00835443543713807 
+p-value: 0.08 
+CI 2.5%: -0.000389789696415508 
+CI 97.5%: 0.0156787820627494 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0377879987846983 
+p-value: 0.08 
+CI 2.5%: -0.000850957587457961 
+CI 97.5%: 0.0710825507170677 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00207475280333426 
+p-value: 0.14 
+CI 2.5%: -0.000386273706244639 
+CI 97.5%: 0.00635845858443707 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0374311798107528 
+p-value: 0.04 
+CI 2.5%: 0.00192597626283521 
+CI 97.5%: 0.0717619080695296 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00161159278128722 
+p-value: 0.26 
+CI 2.5%: -0.000802449549835437 
+CI 97.5%: 0.00526878215810586 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0551704959684476 
+p-value: 0.06 
+CI 2.5%: -0.00127948227859085 
+CI 97.5%: 0.112671699136344 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00835443543713807 
+p-value: 0.08 
+CI 2.5%: -0.000389789696415508 
+CI 97.5%: 0.0156787820627494 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0377879987846983 
+p-value: 0.08 
+CI 2.5%: -0.000850957587457961 
+CI 97.5%: 0.0710825507170677 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00207475280333426 
+p-value: 0.14 
+CI 2.5%: -0.000386273706244639 
+CI 97.5%: 0.00635845858443707 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0374311798107528 
+p-value: 0.04 
+CI 2.5%: 0.00192597626283521 
+CI 97.5%: 0.0717619080695296 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00161159278128722 
+p-value: 0.26 
+CI 2.5%: -0.000802449549835437 
+CI 97.5%: 0.00526878215810586 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0551704959684476 
+p-value: 0.06 
+CI 2.5%: -0.00127948227859085 
+CI 97.5%: 0.112671699136344 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00835443543713807 
+p-value: 0.08 
+CI 2.5%: -0.000389789696415508 
+CI 97.5%: 0.0156787820627494 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0377879987846983 
+p-value: 0.08 
+CI 2.5%: -0.000850957587457961 
+CI 97.5%: 0.0710825507170677 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00207475280333426 
+p-value: 0.14 
+CI 2.5%: -0.000386273706244639 
+CI 97.5%: 0.00635845858443707 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0374311798107528 
+p-value: 0.04 
+CI 2.5%: 0.00192597626283521 
+CI 97.5%: 0.0717619080695296 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00161159278128722 
+p-value: 0.26 
+CI 2.5%: -0.000802449549835437 
+CI 97.5%: 0.00526878215810586 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0551704959684476 
+p-value: 0.06 
+CI 2.5%: -0.00127948227859085 
+CI 97.5%: 0.112671699136344 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00835443543713807 
+p-value: 0.08 
+CI 2.5%: -0.000389789696415508 
+CI 97.5%: 0.0156787820627494 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.037623172943425 
+p-value: 0.08 
+CI 2.5%: -0.00101166715368437 
+CI 97.5%: 0.0709246977398898 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00201210224075427 
+p-value: 0.12 
+CI 2.5%: -0.000233763425159615 
+CI 97.5%: 0.0052880023023008 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0354793002639874 
+p-value: 0.08 
+CI 2.5%: -0.00382428362198472 
+CI 97.5%: 0.068227102864388 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00167779470047188 
+p-value: 0.18 
+CI 2.5%: -0.000472140806563381 
+CI 97.5%: 0.00474627613678279 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0595928634404179 
+p-value: 0.04 
+CI 2.5%: 0.00454371559294864 
+CI 97.5%: 0.125183031262621 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00814303339034727 
+p-value: 0.04 
+CI 2.5%: 0.00134352208552046 
+CI 97.5%: 0.0162595505409213 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.037623172943425 
+p-value: 0.08 
+CI 2.5%: -0.00101166715368437 
+CI 97.5%: 0.0709246977398898 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00201210224075427 
+p-value: 0.12 
+CI 2.5%: -0.000233763425159615 
+CI 97.5%: 0.0052880023023008 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0354793002639874 
+p-value: 0.08 
+CI 2.5%: -0.00382428362198472 
+CI 97.5%: 0.068227102864388 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00167779470047188 
+p-value: 0.18 
+CI 2.5%: -0.000472140806563381 
+CI 97.5%: 0.00474627613678279 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0595928634404179 
+p-value: 0.04 
+CI 2.5%: 0.00454371559294864 
+CI 97.5%: 0.125183031262621 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00814303339034727 
+p-value: 0.04 
+CI 2.5%: 0.00134352208552046 
+CI 97.5%: 0.0162595505409213 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0385014067161299 
+p-value: 0.08 
+CI 2.5%: -0.000607819771173787 
+CI 97.5%: 0.0721274319556411 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00231753951015751 
+p-value: 0.02 
+CI 2.5%: 0.000254807924054585 
+CI 97.5%: 0.0054818660513313 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0376543563933124 
+p-value: 0.04 
+CI 2.5%: 0.00118836714149311 
+CI 97.5%: 0.077537184908882 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00187153481614969 
+p-value: 0.16 
+CI 2.5%: -0.000384577212696274 
+CI 97.5%: 0.0049047298551818 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0641752232035077 
+p-value: 0.02 
+CI 2.5%: 0.0103625509725641 
+CI 97.5%: 0.12935219715002 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00757398571840531 
+p-value: 0.06 
+CI 2.5%: 0.000154111635458194 
+CI 97.5%: 0.0154814704984741 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0385014067161299 
+p-value: 0.08 
+CI 2.5%: -0.000607819771173787 
+CI 97.5%: 0.0721274319556411 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00231753951015751 
+p-value: 0.02 
+CI 2.5%: 0.000254807924054585 
+CI 97.5%: 0.0054818660513313 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0376543563933124 
+p-value: 0.04 
+CI 2.5%: 0.00118836714149311 
+CI 97.5%: 0.077537184908882 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00187153481614969 
+p-value: 0.16 
+CI 2.5%: -0.000384577212696274 
+CI 97.5%: 0.0049047298551818 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0641752232035077 
+p-value: 0.02 
+CI 2.5%: 0.0103625509725641 
+CI 97.5%: 0.12935219715002 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00757398571840531 
+p-value: 0.06 
+CI 2.5%: 0.000154111635458194 
+CI 97.5%: 0.0154814704984741 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0385014067161299 
+p-value: 0.08 
+CI 2.5%: -0.000607819771173787 
+CI 97.5%: 0.0721274319556411 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00231753951015751 
+p-value: 0.02 
+CI 2.5%: 0.000254807924054585 
+CI 97.5%: 0.0054818660513313 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0376543563933124 
+p-value: 0.04 
+CI 2.5%: 0.00118836714149311 
+CI 97.5%: 0.077537184908882 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00187153481614969 
+p-value: 0.16 
+CI 2.5%: -0.000384577212696274 
+CI 97.5%: 0.0049047298551818 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0641752232035077 
+p-value: 0.02 
+CI 2.5%: 0.0103625509725641 
+CI 97.5%: 0.12935219715002 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00757398571840531 
+p-value: 0.06 
+CI 2.5%: 0.000154111635458194 
+CI 97.5%: 0.0154814704984741 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0385014067161299 
+p-value: 0.08 
+CI 2.5%: -0.000607819771173787 
+CI 97.5%: 0.0721274319556411 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00231753951015751 
+p-value: 0.02 
+CI 2.5%: 0.000254807924054585 
+CI 97.5%: 0.0054818660513313 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0376543563933124 
+p-value: 0.04 
+CI 2.5%: 0.00118836714149311 
+CI 97.5%: 0.077537184908882 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00187153481614969 
+p-value: 0.16 
+CI 2.5%: -0.000384577212696274 
+CI 97.5%: 0.0049047298551818 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0641752232035077 
+p-value: 0.02 
+CI 2.5%: 0.0103625509725641 
+CI 97.5%: 0.12935219715002 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00757398571840531 
+p-value: 0.06 
+CI 2.5%: 0.000154111635458194 
+CI 97.5%: 0.0154814704984741 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0385014067161299 
+p-value: 0.08 
+CI 2.5%: -0.000607819771173787 
+CI 97.5%: 0.0721274319556411 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00231753951015751 
+p-value: 0.02 
+CI 2.5%: 0.000254807924054585 
+CI 97.5%: 0.0054818660513313 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0376543563933124 
+p-value: 0.04 
+CI 2.5%: 0.00118836714149311 
+CI 97.5%: 0.077537184908882 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00187153481614969 
+p-value: 0.16 
+CI 2.5%: -0.000384577212696274 
+CI 97.5%: 0.0049047298551818 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0641752232035077 
+p-value: 0.02 
+CI 2.5%: 0.0103625509725641 
+CI 97.5%: 0.12935219715002 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00757398571840531 
+p-value: 0.06 
+CI 2.5%: 0.000154111635458194 
+CI 97.5%: 0.0154814704984741 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0385014067161299 
+p-value: 0.08 
+CI 2.5%: -0.000607819771173787 
+CI 97.5%: 0.0721274319556411 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00231753951015751 
+p-value: 0.02 
+CI 2.5%: 0.000254807924054585 
+CI 97.5%: 0.0054818660513313 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0376543563933124 
+p-value: 0.04 
+CI 2.5%: 0.00118836714149311 
+CI 97.5%: 0.077537184908882 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00187153481614969 
+p-value: 0.16 
+CI 2.5%: -0.000384577212696274 
+CI 97.5%: 0.0049047298551818 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0641752232035077 
+p-value: 0.02 
+CI 2.5%: 0.0103625509725641 
+CI 97.5%: 0.12935219715002 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00757398571840531 
+p-value: 0.06 
+CI 2.5%: 0.000154111635458194 
+CI 97.5%: 0.0154814704984741 
+
+DV: legal_def 
+Mediator: emo_anx_hom 
+ACME: 0.0385014067161299 
+p-value: 0.08 
+CI 2.5%: -0.000607819771173787 
+CI 97.5%: 0.0721274319556411 
+
+DV: extrajudicial_oe 
+Mediator: emo_anx_hom 
+ACME: 0.00231753951015751 
+p-value: 0.02 
+CI 2.5%: 0.000254807924054585 
+CI 97.5%: 0.0054818660513313 
+
+DV: legal_def 
+Mediator: emo_fea_hom 
+ACME: 0.0376543563933124 
+p-value: 0.04 
+CI 2.5%: 0.00118836714149311 
+CI 97.5%: 0.077537184908882 
+
+DV: extrajudicial_oe 
+Mediator: emo_fea_hom 
+ACME: 0.00187153481614969 
+p-value: 0.16 
+CI 2.5%: -0.000384577212696274 
+CI 97.5%: 0.0049047298551818 
+
+DV: legal_def 
+Mediator: emo_ang_hom 
+ACME: 0.0641752232035077 
+p-value: 0.02 
+CI 2.5%: 0.0103625509725641 
+CI 97.5%: 0.12935219715002 
+
+DV: extrajudicial_oe 
+Mediator: emo_ang_hom 
+ACME: 0.00757398571840531 
+p-value: 0.06 
+CI 2.5%: 0.000154111635458194 
+CI 97.5%: 0.0154814704984741 
+

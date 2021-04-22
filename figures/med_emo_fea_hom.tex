@@ -1,0 +1,5 @@
+ \tikzset{mynode/.style={draw,text width=1.5in,align=center}}\begin{tikzpicture}\node[mynode] (m){Fear};\node[mynode,below left=of m](a) {Sensational};\node[mynode,below right=of m](b) {Legal Fund};\draw[-latex] (a.north) -- node[auto,font=\footnotesize] {$b=0.121$, $p=0.054$} (m.west);\draw[-latex] (m.east) -- node[auto,font=\footnotesize] {$b=0.316$, $p=0$} (b.north);\draw[-latex] (a.east) -- node[below=3mm,font=\footnotesize,align=center] {Direct effect, $b=0.223$, $p=0$ \\ Indirect effect, $b=0.035$, 95\% CI [0.003, 0.078]}(b.west);\end{tikzpicture}\vspace{2em}
+
+ \tikzset{mynode/.style={draw,text width=1.5in,align=center}}\begin{tikzpicture}\node[mynode] (m){Fear};\node[mynode,below left=of m](a) {Sensational};\node[mynode,below right=of m](b) {Extrajudicial};\draw[-latex] (a.north) -- node[auto,font=\footnotesize] {$b=0.122$, $p=0.052$} (m.west);\draw[-latex] (m.east) -- node[auto,font=\footnotesize] {$b=0.015$, $p=0.111$} (b.north);\draw[-latex] (a.east) -- node[below=3mm,font=\footnotesize,align=center] {Direct effect, $b=0.057$, $p=0$ \\ Indirect effect, $b=0.002$, 95\% CI [0, 0.005]}(b.west);\end{tikzpicture}\vspace{2em}
+
+
