@@ -1,4 +1,4 @@
-# Replication materials for "How Sensational Content and Outgroup Cues Strengthen Support for Violence and Anti-Muslim Policies"
+# Replication materials for "How 'Rage Bait' and Outgroup Cues Strengthen Support for Violence and Anti-Muslim Policies"
 
 ## Replication Instructions
 
