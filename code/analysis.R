@@ -542,11 +542,11 @@ print.xtable(xtable(thoughts_df), file = "../tables/stm_thoughts.tex", include.r
 
 # Get words with top term score as labels
 
-term_labels <- function(mod, n = ) {
+term_labels <- function(mod, n = 8) {
 	labs <- labelTopics(mod, n = n)
 	return(apply(labs$score, 1, paste, collapse=', '))
 }
-labels_8 <- term_labels(mod, n = 8)
+labels_8 <- term_labels(mod)
 
 # Plot proportions
 
