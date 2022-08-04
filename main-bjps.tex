@@ -1,0 +1,64 @@
+\documentclass[
+  journal=bjps
+]{cup-journal}
+
+% Packages for the example
+\usepackage{booktabs,microtype,siunitx,tabularx}
+\usepackage{graphicx} % Graphics
+\usepackage{indentfirst} % Tells LaTeX to indent every paragraph 
+\usepackage{setspace} % To set line spacing
+\usepackage{rotating} % For sideways tables/figures
+\usepackage{amsmath} % Some math symbols
+\usepackage{subfig}
+\usepackage{mdwlist}
+\usepackage{url}
+\usepackage{verbatim}
+\urlstyle{same}
+\usepackage{multirow}
+%\usepackage[nolists]{endfloat} % Figures and tables at the end
+\newcommand{\R}{\texttt{R}\space} % Write R in typewriter font
+\newcommand{\trans}[1]{{#1}^{\ensuremath{\mathsf{T}}}} % Transpose symbol 
+\sisetup{detect-all,separate-uncertainty = true}
+
+\addbibresource{sources.bib}
+
+\title{How ``Rage Bait'' and Outgroup Cues Strengthen Support for Violence and Anti-Muslim Policies}
+
+%\author{Jeffrey\ Javed}
+%\affiliation{Former Research Fellow, Weiser Center for Emerging Democracies, University of Michigan}
+%\author{Blake\ Miller}
+%\affiliation{Assistant Professor, London School of Economics}
+%\email{b.a.miller@lse.ac.uk}
+
+%\doi{10.1017/S0007123421000132}
+
+%\received {}
+%\revised  {}
+%\accepted {}
+%\published{}
+
+\keywords{hate speech; political violence; content moderation}
+% \jel{Q11; Q12; D81; M31}
+% \msc{Q14; Q18; E21}
+% \abbreviations{
+%     BDHS: Bangladesh Demographic and Health Survey, 
+%     IDA: Fe-deficiency anaemia, 
+%     IFA: Fe-folic acid, 
+%     MNP: multiple micronutrient powder, 
+%     VAD: vitamin A deficiency
+% }
+
+\begin{document}
+
+\input{content}
+
+% BJPOLS uses footnotes, not endnotes. \endnote in this template will behave like \footnote; and \printendnotes will not output anything.
+% \printendnotes
+
+\printbibliography
+
+\appendix
+
+%\input{sources.bib}
+
+\end{document}
